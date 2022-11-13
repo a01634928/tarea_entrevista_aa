@@ -31,7 +31,7 @@ class KNN:
         #extrae las etiquetas de K nearest neighbor de las muestras de entrenamiento
         k_nei_lbl = [self.y_train[i] for i in k_idx]
         #Regresa la etiqueta de clase que apareció más veces
-        frec = Counter(k_nei_lbl).frec(1)
+        frec = Counter(k_nei_lbl).most_common(1)
         return frec[0][0]
 
 
